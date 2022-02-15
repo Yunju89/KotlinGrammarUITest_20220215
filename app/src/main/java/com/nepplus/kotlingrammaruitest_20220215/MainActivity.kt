@@ -16,13 +16,25 @@ class MainActivity : AppCompatActivity() {
             val inputpw = edtPW.text.toString()
 
 //            [내가 한 풀이]
-            if(inputid != "admin") {
-                Toast.makeText(this, "아이디가 잘못되었습니다.", Toast.LENGTH_SHORT).show()
-            }else if (inputpw != "asdf") {
-                Toast.makeText(this, "비밀번호가 잘못되었습니다", Toast.LENGTH_SHORT).show()
-            }else {
+//            if(inputid != "admin") {
+//                Toast.makeText(this, "아이디가 잘못되었습니다.", Toast.LENGTH_SHORT).show()
+//            }else if (inputpw != "asdf") {
+//                Toast.makeText(this, "비밀번호가 잘못되었습니다", Toast.LENGTH_SHORT).show()
+//            }else {
+//                Toast.makeText(this, "관리자님 환영합니다.", Toast.LENGTH_SHORT).show()
+//            }
+
+            //            [강사님 풀이]
+            if (inputid == "admin" && inputpw == "asdf"){
                 Toast.makeText(this, "관리자님 환영합니다.", Toast.LENGTH_SHORT).show()
+            } else if (inputid != "admin") {
+                Toast.makeText(this, "아이디가 잘못되었습니다.", Toast.LENGTH_SHORT).show()
+            } else if (inputpw != "asdf") {
+                Toast.makeText(this, "비밀번호가 잘못되었습니다", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "로그인에 실패하였습니다.", Toast.LENGTH_SHORT).show()
             }
+
 
 
         }
